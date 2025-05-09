@@ -1,10 +1,12 @@
-import Header from "../components/header";
+import Header from "../components/Header";
+import Footer from '../components/Footer.jsx';
 
 const Logement = () =>{
     return(
-        <div>
+        <div className="main-container">
         <Header/>
         <h2>Ceci est un logement</h2>
+        <Footer/>
         </div>
     )
 };

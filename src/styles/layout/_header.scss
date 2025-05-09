@@ -1,11 +1,24 @@
-.main-header{
-display: flex;
+@use "../abstract" as *;
 
-nav ul{
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  nav ul {
     display: flex;
-    gap: 10px;
-}
-}
-.logo-header {
-    color: #FF6060;
+    gap: 30px;
+    a{
+        font-size: 30px;
+   
+    }
   }
+.active {
+    border-bottom: 2px solid black; 
+  }
+.logo-header {
+  color: $color-primary;
+  width: 202px;
+  height: 69px;
+}
+}

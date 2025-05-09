@@ -1,0 +1,9 @@
+@use "../abstract" as *;
+
+.main-container{
+    width: 100%;
+    padding: 100px 100px;
+    max-width:myWidth ;
+    box-sizing: border-box;
+    font-family: Montserrat-Regular;
+}
