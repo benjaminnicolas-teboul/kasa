@@ -1,11 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import Logo from "./Logo.jsx";
 
 const Header = () => {
   return (
     <header className="main-header">
-      <Logo className="logo-header" />
+      <Link to="/">
+        <Logo className="logo-header" />
+      </Link>
       <nav>
         <ul>
           <li>
@@ -21,7 +23,7 @@ const Header = () => {
               to="/apropos"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              À propos
+              A propos
             </NavLink>
           </li>
         </ul>

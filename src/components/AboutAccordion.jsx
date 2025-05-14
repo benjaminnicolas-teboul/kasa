@@ -1,9 +1,7 @@
-
-import React, { useState } from "react";
-import aboutList from "../datas/aboutList.json";
+import { useState } from "react";
 import Chevron from "./Chevron";
 
-const AboutAccordion = () => {
+const AboutAccordion = ({ data }) => {
   const [openIndexes, setOpenIndexes] = useState([]);
 
   const handleToggle = (idx) => {
@@ -14,12 +12,11 @@ const AboutAccordion = () => {
 
   return (
     <div>
-      {aboutList.map((item, idx) => (
+      {data.map((item, idx) => (
         <div key={item.title} style={{ marginBottom: "1rem" }}>
           <button
             onClick={() => handleToggle(idx)}
             className="about-btn"
-          
           >
             <span>{item.title}</span>
             <Chevron
@@ -49,4 +46,3 @@ const AboutAccordion = () => {
 };
 
 export default AboutAccordion;
-
