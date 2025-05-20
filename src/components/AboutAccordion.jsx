@@ -13,7 +13,7 @@ const AboutAccordion = ({ data }) => {
   return (
     <div>
       {data.map((item, idx) => (
-        <div key={item.title} style={{ marginBottom: "1rem" }}>
+        <div key={item.title} style={{ marginBottom: "2rem" }}>
           <button
             onClick={() => handleToggle(idx)}
             className="about-btn"
@@ -27,17 +27,7 @@ const AboutAccordion = ({ data }) => {
             />
           </button>
           {openIndexes.includes(idx) && (
-            <div
-              style={{
-                background: "#f2f2f2",
-                borderRadius: "0 0 8px 8px",
-                padding: "1em 2em",
-                color: "#222",
-                animation: "fadeIn 0.3s"
-              }}
-            >
-              {item.content}
-            </div>
+            <div className="about-content">{item.content}</div>
           )}
         </div>
       ))}

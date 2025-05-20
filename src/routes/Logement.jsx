@@ -8,9 +8,10 @@ import LogementAccordion from "../components/LogementAccordion.jsx";
 import AppartementTag from "../components/AppartementTag";
 import AppartementTitle from "../components/AppartementTitle";
 import AppartementLocation from "../components/AppartementLocation";
-import AppartementOwner from "../components/AppartementOwner";
+import AppartementOwnerInfo from "../components/AppartementOwnerInfo.jsx";
 import AppartementOwnerPicture from "../components/AppartementOwnerPicture";
 import AppartementRating from "../components/AppartementRating";
+import SplitFirstNameLastName from "../components/SplitFirstNameLastName.jsx";
 
 const Logement = () => {
   const { logementId } = useParams();
@@ -23,11 +24,14 @@ const Logement = () => {
   }, [appartement, navigate]);
 
   if (!appartement) return null;
-
+  const { firstName, lastName } = SplitFirstNameLastName(appartement.host.name);
+  
   return (
+    <div>
     <div className="main-container">
       <Header />
       <Caroussel id={logementId} />
+      <div className="appart_host_infos_container">
       <div className="Titlesandtags_container">
         <AppartementTitle title={appartement.title} className="apart_title" />
         <AppartementLocation
@@ -40,19 +44,24 @@ const Logement = () => {
           ))}
         </div>
       </div>
-      <div className="ownrinfos_rating_container">
-      <AppartementOwner name={appartement.host.name} />
-      <AppartementOwnerPicture
-        photoUrl={appartement.host.picture}
-        altText={`Photo du propriétaire ${appartement.host.name}`}
-      />
-      <AppartementRating rating={appartement.rating} />
+      <div className="ownerinfos_rating_container">
+        <div className="owner_infos">
+          <AppartementOwnerInfo firstName={firstName} lastName={lastName} />
+          <AppartementOwnerPicture
+            photoUrl={appartement.host.picture}
+            altText={`Photo du propriétaire ${appartement.host.name}`}
+          />
+        </div>
+        <AppartementRating rating={appartement.rating} />
+      </div>
       </div>
       <LogementAccordion
         description={appartement.description}
         equipments={appartement.equipments}
       />
-      <Footer />
+      
+    </div>
+    <Footer />
     </div>
   );
 };

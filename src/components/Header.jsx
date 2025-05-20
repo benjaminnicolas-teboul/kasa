@@ -23,7 +23,7 @@ const Header = () => {
               to="/apropos"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
-              A propos
+              A Propos
             </NavLink>
           </li>
         </ul>

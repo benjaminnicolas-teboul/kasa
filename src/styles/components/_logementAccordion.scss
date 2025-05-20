@@ -1,0 +1,20 @@
+.accordions-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: stretch;
+  margin-bottom: 1rem;
+  .about-btn,.about-content{
+    width: 100%;
+  }
+  
+  gap: 4rem;
+  ul, li {
+  word-break: break-word;
+}
+}
+
+.accordions-row > * {
+  flex: 1;
+    min-width: 0;
+       overflow: hidden;
+}

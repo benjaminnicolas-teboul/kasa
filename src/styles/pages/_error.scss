@@ -8,15 +8,19 @@
 
   h1 {
     font-size: 20rem;
+    margin: 5rem 0;
   }
 
   p {
     font-size: 2.5rem;
+    margin-bottom: 7rem;
   }
 
   .linkHome {
     color: black;
     font-size: 1.3rem;
     text-decoration: underline;
+    display: block;
+    margin-bottom: 4.5rem;
   }
 }

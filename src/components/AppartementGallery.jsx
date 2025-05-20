@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
   <div className="gallery">
     {appartements.map(({ id, title, cover }) => (
       <Link 
-        to={`/logement/${id}`} // Lien dynamique avec l'ID
+        to={`/logement/${id}`} 
         key={id} 
         className="appartement-card"
       >
