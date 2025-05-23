@@ -8,6 +8,7 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        border-radius: 1.8rem;
     }
 
     .arrow {
@@ -16,7 +17,6 @@
         transform: translateY(-50%);
         font-size: 6rem;
         color: #fff;
-        padding: 0.2em 0.4em;
         border-radius: 50%;
         cursor: pointer;
         user-select: none;
@@ -24,11 +24,11 @@
     }
 
     .arrow_left {
-        left: 2px;
+        left: 1.5rem;
     }
 
     .arrow_right {
-        right: 2px;
+        right: 1.5rem;
     }
     .photo-counter {
     position: absolute;

@@ -4,9 +4,11 @@ const Chevron = ({
   open = false,
   size = 45,
   color = "#fff",
-  strokeWidth = 1.5
+  strokeWidth = 1.5,
+   className = ""
 }) => (
   <svg
+  className={className}
     width={size}
     height={size}
     viewBox="0 0 16 16"

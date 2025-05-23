@@ -11,7 +11,9 @@ const Apropos = () => {
       <div className="main-container">
         <Header />
         <Banner image={bannerImg} brightness={0.8} />
+        <div className="accordion-column">
         <AboutAccordion data={aboutList}/>
+        </div>
       </div>
       <Footer />
     </div>

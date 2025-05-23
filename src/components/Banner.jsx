@@ -8,7 +8,7 @@ const Banner = ({ image, text, brightness = 0.5 }) => (
         className="banner-image"
         style={{ filter: `brightness(${brightness})` }}
       />
-      <div className="banner-text">{text}</div>
+      <h1 className="banner-text">{text}</h1>
     </div>
   );
   

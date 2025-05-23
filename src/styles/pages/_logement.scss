@@ -4,8 +4,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
-
+  margin-top: 1rem;
 }
 
 .apart_title {
@@ -41,7 +40,7 @@
       display: flex;
       flex-direction: column;
         justify-content: flex-end;
-      gap: 10px
+    
   }
 
   .owner_infos{
@@ -57,8 +56,13 @@
      align-items: center;
        box-sizing: border-box;
          width: 100%;
-         padding: 1.2rem 0;
+         padding: 1.4rem 0 0.5rem;
+}
        
-  }
-
- 
+  
+  .TitleandTags_container {
+display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+ }

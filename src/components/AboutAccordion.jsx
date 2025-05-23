@@ -13,18 +13,18 @@ const AboutAccordion = ({ data }) => {
   return (
     <div>
       {data.map((item, idx) => (
-        <div key={item.title} style={{ marginBottom: "2rem" }}>
-          <button
-            onClick={() => handleToggle(idx)}
-            className="about-btn"
-          >
+        <div key={item.title} className="accordion_container" >
+          <button className="about-btn">
             <span>{item.title}</span>
-            <Chevron
-              open={openIndexes.includes(idx)}
-              color="#fff"
-              size={45}
-              strokeWidth={1.5}
-            />
+            <span onClick={() => handleToggle(idx)}>
+              <Chevron
+                open={openIndexes.includes(idx)}
+                color="#fff"
+                size={45}
+                strokeWidth={1.5}
+                className="about-chevron"
+              />
+            </span>
           </button>
           {openIndexes.includes(idx) && (
             <div className="about-content">{item.content}</div>
